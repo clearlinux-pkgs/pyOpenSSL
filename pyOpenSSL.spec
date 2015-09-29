@@ -4,7 +4,7 @@
 #
 Name     : pyOpenSSL
 Version  : 0.15.1
-Release  : 21
+Release  : 22
 URL      : https://pypi.python.org/packages/source/p/pyOpenSSL/pyOpenSSL-0.15.1.tar.gz
 Source0  : https://pypi.python.org/packages/source/p/pyOpenSSL/pyOpenSSL-0.15.1.tar.gz
 Summary  : Python wrapper module around the OpenSSL library
