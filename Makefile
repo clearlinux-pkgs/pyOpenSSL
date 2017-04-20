@@ -1,5 +1,5 @@
 PKG_NAME := pyOpenSSL
-URL := http://pypi.debian.net/pyOpenSSL/pyOpenSSL-16.2.0.tar.gz
-ARCHIVES :=
+URL := https://pypi.debian.net/pyOpenSSL/pyOpenSSL-17.0.0.tar.gz
+
 
 include ../common/Makefile.common
