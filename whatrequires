@@ -1,0 +1,5 @@
+# This file contains recursive sources that require this package
+ecdsa-0:0.13-26.src
+ndg_httpsclient-0:0.4.3-18.src
+paramiko-0:2.2.1-31.src
+urllib3-0:1.22-44.src
