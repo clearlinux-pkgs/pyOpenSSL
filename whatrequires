@@ -1,5 +1,10 @@
 # This file contains recursive sources that require this package
+ceph
 ecdsa
+gensim
+jupyter-notebook-gist
 ndg_httpsclient
 paramiko
+requests
+smart_open
 urllib3
