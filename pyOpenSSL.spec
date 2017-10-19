@@ -6,7 +6,7 @@
 #
 Name     : pyOpenSSL
 Version  : 17.3.0
-Release  : 43
+Release  : 44
 URL      : https://pypi.debian.net/pyOpenSSL/pyOpenSSL-17.3.0.tar.gz
 Source0  : https://pypi.debian.net/pyOpenSSL/pyOpenSSL-17.3.0.tar.gz
 Source99 : https://pypi.debian.net/pyOpenSSL/pyOpenSSL-17.3.0.tar.gz.asc
