@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x235AE5F129F9ED98 (paul.l.kehrer@gmail.com)
 #
 Name     : pyOpenSSL
-Version  : 17.3.0
-Release  : 44
-URL      : https://pypi.debian.net/pyOpenSSL/pyOpenSSL-17.3.0.tar.gz
-Source0  : https://pypi.debian.net/pyOpenSSL/pyOpenSSL-17.3.0.tar.gz
-Source99 : https://pypi.debian.net/pyOpenSSL/pyOpenSSL-17.3.0.tar.gz.asc
+Version  : 17.5.0
+Release  : 45
+URL      : https://pypi.debian.net/pyOpenSSL/pyOpenSSL-17.5.0.tar.gz
+Source0  : https://pypi.debian.net/pyOpenSSL/pyOpenSSL-17.5.0.tar.gz
+Source99 : https://pypi.debian.net/pyOpenSSL/pyOpenSSL-17.5.0.tar.gz.asc
 Summary  : Python wrapper module around the OpenSSL library
 Group    : Development/Tools
 License  : Apache-2.0
@@ -74,19 +74,19 @@ python3 components for the pyOpenSSL package.
 
 
 %prep
-%setup -q -n pyOpenSSL-17.3.0
+%setup -q -n pyOpenSSL-17.5.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1507169764
+export SOURCE_DATE_EPOCH=1512139890
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1507169764
+export SOURCE_DATE_EPOCH=1512139890
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
