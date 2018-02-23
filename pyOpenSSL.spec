@@ -6,23 +6,27 @@
 #
 Name     : pyOpenSSL
 Version  : 17.5.0
-Release  : 47
+Release  : 48
 URL      : https://pypi.debian.net/pyOpenSSL/pyOpenSSL-17.5.0.tar.gz
 Source0  : https://pypi.debian.net/pyOpenSSL/pyOpenSSL-17.5.0.tar.gz
 Source99 : https://pypi.debian.net/pyOpenSSL/pyOpenSSL-17.5.0.tar.gz.asc
 Summary  : Python wrapper module around the OpenSSL library
 Group    : Development/Tools
 License  : Apache-2.0
-Requires: pyOpenSSL-legacypython
 Requires: pyOpenSSL-python3
 Requires: pyOpenSSL-python
 Requires: cryptography
 Requires: six
+Requires: sphinx_rtd_theme
 BuildRequires : cffi
+BuildRequires : cffi-legacypython
 BuildRequires : cffi-python
 BuildRequires : cryptography
+BuildRequires : cryptography-legacypython
 BuildRequires : enum34
+BuildRequires : enum34-legacypython
 BuildRequires : idna-python
+BuildRequires : ipaddress-legacypython
 BuildRequires : ipaddress-python
 BuildRequires : openssl-dev
 BuildRequires : pbr
@@ -30,12 +34,15 @@ BuildRequires : pip
 BuildRequires : pluggy
 BuildRequires : py-python
 BuildRequires : pyasn1
+BuildRequires : pyasn1-legacypython
 BuildRequires : pycparser
+BuildRequires : pycparser-legacypython
 BuildRequires : pycparser-python
 BuildRequires : pytest
 BuildRequires : python-dev
 BuildRequires : python3-dev
 BuildRequires : setuptools
+BuildRequires : setuptools-legacypython
 BuildRequires : six
 BuildRequires : tox
 BuildRequires : virtualenv
@@ -56,7 +63,6 @@ legacypython components for the pyOpenSSL package.
 %package python
 Summary: python components for the pyOpenSSL package.
 Group: Default
-Requires: pyOpenSSL-legacypython
 Requires: pyOpenSSL-python3
 Provides: pyopenssl-python
 
@@ -81,12 +87,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1512139890
+export SOURCE_DATE_EPOCH=1519426877
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1512139890
+export SOURCE_DATE_EPOCH=1519426877
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
