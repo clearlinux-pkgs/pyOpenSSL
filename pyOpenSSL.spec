@@ -36,7 +36,7 @@ BuildRequires : pycparser
 BuildRequires : pycparser-legacypython
 BuildRequires : pycparser-python
 BuildRequires : pytest
-BuildRequires : python-dev
+
 BuildRequires : python3-dev
 BuildRequires : setuptools
 BuildRequires : setuptools-legacypython
