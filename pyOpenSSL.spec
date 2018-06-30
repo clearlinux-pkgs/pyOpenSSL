@@ -4,13 +4,14 @@
 #
 Name     : pyOpenSSL
 Version  : 18.0.0
-Release  : 57
+Release  : 58
 URL      : https://pypi.debian.net/pyOpenSSL/pyOpenSSL-18.0.0.tar.gz
 Source0  : https://pypi.debian.net/pyOpenSSL/pyOpenSSL-18.0.0.tar.gz
 Summary  : Python wrapper module around the OpenSSL library
 Group    : Development/Tools
 License  : Apache-2.0
 Requires: pyOpenSSL-python3
+Requires: pyOpenSSL-license
 Requires: pyOpenSSL-python
 Requires: cryptography
 Requires: six
@@ -36,7 +37,8 @@ BuildRequires : pycparser
 BuildRequires : pycparser-legacypython
 BuildRequires : pycparser-python
 BuildRequires : pytest
-
+BuildRequires : python-core
+BuildRequires : python3-core
 BuildRequires : python3-dev
 BuildRequires : setuptools
 BuildRequires : setuptools-legacypython
@@ -55,6 +57,14 @@ Requires: python-core
 
 %description legacypython
 legacypython components for the pyOpenSSL package.
+
+
+%package license
+Summary: license components for the pyOpenSSL package.
+Group: Default
+
+%description license
+license components for the pyOpenSSL package.
 
 
 %package python
@@ -84,13 +94,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1526524902
+export SOURCE_DATE_EPOCH=1530376398
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1526524902
+export SOURCE_DATE_EPOCH=1530376398
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/doc/pyOpenSSL
+cp LICENSE %{buildroot}/usr/share/doc/pyOpenSSL/LICENSE
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
 echo ----[ mark ]----
@@ -103,6 +115,10 @@ echo ----[ mark ]----
 %files legacypython
 %defattr(-,root,root,-)
 /usr/lib/python2*/*
+
+%files license
+%defattr(-,root,root,-)
+/usr/share/doc/pyOpenSSL/LICENSE
 
 %files python
 %defattr(-,root,root,-)
