@@ -3,3 +3,4 @@
 Sphinx
 pretend
 pytest
+sphinx_rtd_theme

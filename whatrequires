@@ -4,5 +4,4 @@ certbot
 ecdsa
 josepy
 ndg_httpsclient
-paramiko
 urllib3
