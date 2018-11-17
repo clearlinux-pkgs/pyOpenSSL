@@ -4,7 +4,7 @@
 #
 Name     : pyOpenSSL
 Version  : 18.0.0
-Release  : 64
+Release  : 65
 URL      : https://pypi.debian.net/pyOpenSSL/pyOpenSSL-18.0.0.tar.gz
 Source0  : https://pypi.debian.net/pyOpenSSL/pyOpenSSL-18.0.0.tar.gz
 Summary  : Python wrapper module around the OpenSSL library
@@ -89,12 +89,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1541276394
+export SOURCE_DATE_EPOCH=1542428997
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1541276394
+export SOURCE_DATE_EPOCH=1542428997
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pyOpenSSL
 cp LICENSE %{buildroot}/usr/share/package-licenses/pyOpenSSL/LICENSE
