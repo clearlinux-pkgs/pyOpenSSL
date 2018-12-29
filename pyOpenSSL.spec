@@ -4,7 +4,7 @@
 #
 Name     : pyOpenSSL
 Version  : 18.0.0
-Release  : 65
+Release  : 66
 URL      : https://pypi.debian.net/pyOpenSSL/pyOpenSSL-18.0.0.tar.gz
 Source0  : https://pypi.debian.net/pyOpenSSL/pyOpenSSL-18.0.0.tar.gz
 Summary  : Python wrapper module around the OpenSSL library
