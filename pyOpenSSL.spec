@@ -4,7 +4,7 @@
 #
 Name     : pyOpenSSL
 Version  : 19.0.0
-Release  : 69
+Release  : 70
 URL      : https://pypi.debian.net/pyOpenSSL/pyOpenSSL-19.0.0.tar.gz
 Source0  : https://pypi.debian.net/pyOpenSSL/pyOpenSSL-19.0.0.tar.gz
 Summary  : Python wrapper module around the OpenSSL library
@@ -18,10 +18,10 @@ Requires: six
 BuildRequires : buildreq-distutils23
 BuildRequires : buildreq-distutils3
 BuildRequires : cffi
-BuildRequires : cffi-legacypython
 BuildRequires : cffi-python
 BuildRequires : cryptography
-BuildRequires : cryptography-legacypython
+BuildRequires : deprecated-cffi-legacypython
+BuildRequires : deprecated-cryptography-legacypython
 BuildRequires : enum34
 BuildRequires : enum34-legacypython
 BuildRequires : idna-python
@@ -42,8 +42,8 @@ BuildRequires : tox
 BuildRequires : virtualenv
 
 %description
-pyOpenSSL -- A Python wrapper around the OpenSSL library
-        ========================================================
+This directory contains client and server examples for the "Server Name
+Indication" (SNI) feature.
 
 %package legacypython
 Summary: legacypython components for the pyOpenSSL package.
@@ -89,13 +89,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1553560137
-export LDFLAGS="${LDFLAGS} -fno-lto"
+export SOURCE_DATE_EPOCH=1554311170
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1553560137
+export SOURCE_DATE_EPOCH=1554311170
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pyOpenSSL
 cp LICENSE %{buildroot}/usr/share/package-licenses/pyOpenSSL/LICENSE

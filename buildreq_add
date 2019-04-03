@@ -5,11 +5,11 @@ six
 cryptography
 enum34
 pyasn1
-cryptography-legacypython
+deprecated-cryptography-legacypython
 enum34-legacypython
 pyasn1-legacypython
 cffi-python
-cffi-legacypython
+deprecated-cffi-legacypython
 cffi
 ipaddress-python
 ipaddress-legacypython
