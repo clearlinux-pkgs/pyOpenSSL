@@ -7,14 +7,14 @@ enum34
 pyasn1
 deprecated-cryptography-legacypython
 enum34-legacypython
-pyasn1-legacypython
+deprecated-pyasn1-legacypython
 cffi-python
 deprecated-cffi-legacypython
 cffi
 ipaddress-python
-ipaddress-legacypython
+deprecated-ipaddress-legacypython
 idna-python
 pycparser-python
-pycparser-legacypython
+deprecated-pycparser-legacypython
 pycparser
 setuptools-legacypython
