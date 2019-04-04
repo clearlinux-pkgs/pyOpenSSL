@@ -4,7 +4,7 @@
 #
 Name     : pyOpenSSL
 Version  : 19.0.0
-Release  : 71
+Release  : 72
 URL      : https://pypi.debian.net/pyOpenSSL/pyOpenSSL-19.0.0.tar.gz
 Source0  : https://pypi.debian.net/pyOpenSSL/pyOpenSSL-19.0.0.tar.gz
 Summary  : Python wrapper module around the OpenSSL library
@@ -19,13 +19,7 @@ BuildRequires : buildreq-distutils3
 BuildRequires : cffi
 BuildRequires : cffi-python
 BuildRequires : cryptography
-BuildRequires : deprecated-cffi-legacypython
-BuildRequires : deprecated-cryptography-legacypython
-BuildRequires : deprecated-ipaddress-legacypython
-BuildRequires : deprecated-pyasn1-legacypython
-BuildRequires : deprecated-pycparser-legacypython
 BuildRequires : enum34
-BuildRequires : enum34-legacypython
 BuildRequires : idna-python
 BuildRequires : ipaddress-python
 BuildRequires : openssl-dev
@@ -35,7 +29,6 @@ BuildRequires : pyasn1
 BuildRequires : pycparser
 BuildRequires : pycparser-python
 BuildRequires : pytest
-BuildRequires : setuptools-legacypython
 BuildRequires : six
 BuildRequires : tox
 BuildRequires : virtualenv
@@ -79,7 +72,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1554326241
+export SOURCE_DATE_EPOCH=1554340171
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 

@@ -1,6 +1,7 @@
 # This file contains recursive sources that require this package
 acme
 certbot
+deprecated-urllib3
 ecdsa
 josepy
 ndg_httpsclient

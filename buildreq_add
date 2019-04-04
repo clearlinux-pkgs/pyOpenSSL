@@ -5,16 +5,10 @@ six
 cryptography
 enum34
 pyasn1
-deprecated-cryptography-legacypython
-enum34-legacypython
-deprecated-pyasn1-legacypython
+#enum34-legacypython
 cffi-python
-deprecated-cffi-legacypython
 cffi
 ipaddress-python
-deprecated-ipaddress-legacypython
 idna-python
 pycparser-python
-deprecated-pycparser-legacypython
 pycparser
-setuptools-legacypython
