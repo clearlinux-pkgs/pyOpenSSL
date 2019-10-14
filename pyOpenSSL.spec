@@ -4,7 +4,7 @@
 #
 Name     : pyOpenSSL
 Version  : 19.0.0
-Release  : 74
+Release  : 75
 URL      : https://pypi.debian.net/pyOpenSSL/pyOpenSSL-19.0.0.tar.gz
 Source0  : https://pypi.debian.net/pyOpenSSL/pyOpenSSL-19.0.0.tar.gz
 Summary  : Python wrapper module around the OpenSSL library
@@ -19,7 +19,6 @@ BuildRequires : buildreq-distutils3
 BuildRequires : cffi
 BuildRequires : cffi-python
 BuildRequires : cryptography
-BuildRequires : enum34
 BuildRequires : idna-python
 BuildRequires : ipaddress-python
 BuildRequires : openssl-dev
@@ -34,8 +33,8 @@ BuildRequires : tox
 BuildRequires : virtualenv
 
 %description
-This directory contains client and server examples for the "Server Name
-Indication" (SNI) feature.
+pyOpenSSL -- A Python wrapper around the OpenSSL library
+        ========================================================
 
 %package license
 Summary: license components for the pyOpenSSL package.
@@ -71,8 +70,13 @@ python3 components for the pyOpenSSL package.
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1554340171
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1571082900
+export GCC_IGNORE_WERROR=1
+export CFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$CFLAGS -fno-lto "
+export FFLAGS="$CFLAGS -fno-lto "
+export CXXFLAGS="$CXXFLAGS -fno-lto "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
@@ -80,7 +84,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pyOpenSSL
-cp LICENSE %{buildroot}/usr/share/package-licenses/pyOpenSSL/LICENSE
+cp %{_builddir}/pyOpenSSL-19.0.0/LICENSE %{buildroot}/usr/share/package-licenses/pyOpenSSL/2b8b815229aa8a61e483fb4ba0588b8b6c491890
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -91,7 +95,7 @@ echo ----[ mark ]----
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/pyOpenSSL/LICENSE
+/usr/share/package-licenses/pyOpenSSL/2b8b815229aa8a61e483fb4ba0588b8b6c491890
 
 %files python
 %defattr(-,root,root,-)

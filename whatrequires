@@ -1,8 +1,15 @@
 # This file contains recursive sources that require this package
 acme
+barbican
 certbot
-deprecated-urllib3
+conda
 ecdsa
+gcs-oauth2-boto-plugin
+glance
+gsutil
 josepy
+koji
 ndg_httpsclient
+pysaml2
+python-glanceclient
 urllib3
