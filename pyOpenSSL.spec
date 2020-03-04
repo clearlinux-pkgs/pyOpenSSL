@@ -59,6 +59,7 @@ Summary: python3 components for the pyOpenSSL package.
 Group: Default
 Requires: python3-core
 Provides: pypi(pyOpenSSL)
+Provides: pypi(PyOpenSSL)
 Requires: pypi(cryptography)
 Requires: pypi(sphinx)
 Requires: pypi(pytest)
