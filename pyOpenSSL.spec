@@ -4,7 +4,7 @@
 #
 Name     : pyOpenSSL
 Version  : 19.0.0
-Release  : 82
+Release  : 83
 URL      : https://pypi.debian.net/pyOpenSSL/pyOpenSSL-19.0.0.tar.gz
 Source0  : https://pypi.debian.net/pyOpenSSL/pyOpenSSL-19.0.0.tar.gz
 Summary  : Python wrapper module around the OpenSSL library
@@ -33,8 +33,8 @@ BuildRequires : tox
 BuildRequires : virtualenv
 
 %description
-This directory contains client and server examples for the "Server Name
-Indication" (SNI) feature.
+pyOpenSSL -- A Python wrapper around the OpenSSL library
+        ========================================================
 
 %package license
 Summary: license components for the pyOpenSSL package.
@@ -59,13 +59,8 @@ Summary: python3 components for the pyOpenSSL package.
 Group: Default
 Requires: python3-core
 Provides: pypi(pyOpenSSL)
-Provides: pypi(PyOpenSSL)
 Requires: pypi(cryptography)
-Requires: pypi(Sphinx)
-Requires: pypi(pytest)
 Requires: pypi(six)
-Requires: pypi(pretend)
-Requires: pypi(sphinx-rtd-theme)
 
 %description python3
 python3 components for the pyOpenSSL package.
@@ -80,8 +75,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583293865
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1583439936
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
