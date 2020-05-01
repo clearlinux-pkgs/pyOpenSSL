@@ -8,7 +8,6 @@ pyasn1
 #enum34-legacypython
 cffi-python
 cffi
-ipaddress-python
 idna-python
 pycparser-python
 pycparser

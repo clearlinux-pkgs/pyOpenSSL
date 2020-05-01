@@ -1,12 +1,11 @@
 # This file contains recursive sources that require this package
 acme
-barbican
 certbot
+cinder
 conda
 docker-py
 ecdsa
 gcs-oauth2-boto-plugin
-glance
 gsutil
 josepy
 koji
