@@ -1,7 +1,7 @@
 # This file contains recursive sources that require this package
 acme
+ceph
 certbot
-cinder
 conda
 docker-py
 ecdsa
@@ -10,6 +10,4 @@ gsutil
 josepy
 koji
 ndg_httpsclient
-pysaml2
-python-glanceclient
 urllib3
